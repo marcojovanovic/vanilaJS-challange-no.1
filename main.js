@@ -1,17 +1,19 @@
-// basic url
+// varijable
 
 const card = document.querySelector('#card');
-
 const input = document.querySelector('.github__input');
 const form = document.querySelector('.github__form');
 
-// api cals
+// basic api cals
 
 const basicUrl = `https://api.github.com/users/`;
 const repoUrl = `https://api.github.com/users//repos`;
 
+// pozivanje forme
 form.addEventListener('submit', getGithubUser);
 form.addEventListener('submit', getGithubRepos);
+
+// izlistavanje svih github usera
 
 function getGithubUser(e) {
   e.preventDefault();
@@ -42,6 +44,8 @@ function getGithubRepos(e) {
   });
 }
 
+// dom prikaz usera
+
 function showGithbubCard(githubProfile) {
   card.classList.add('github__card');
   card.innerHTML = `
@@ -61,36 +65,20 @@ function showGithbubCard(githubProfile) {
        </div>
 
 </div>
- 
  `;
 }
+
+// prikaz naziva repositorijuma usera
 
 function showGitHubRepo(githubRepo) {
   const gitRepos = document.querySelector('.github__repos');
 
- githubRepo
- .slice(0,5)
- .forEach((item=>{
-
-  
-
-
-    return gitRepos.innerHTML += `<span class='github__repo'>${item.name}</span>`
-
-
-  }))
-
-
-
-  //gitRepos.innerHTML = reposData
-  
-
-  //gitRepos.innerHTML = ` <span class="github__repo">${githubRepo.name}</span>`
- 
+  githubRepo.slice(0, 5).forEach((item) => {
+    return (gitRepos.innerHTML += `<span class='github__repo'>${item.name}</span>`);
+  });
 }
 
-
-
+// prikaz greske, u slucaju da u inputu stoji profil koji ne postoji
 
 function errorCard() {
   card.classList.add('github__card');
