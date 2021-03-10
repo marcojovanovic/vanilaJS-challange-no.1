@@ -27,7 +27,7 @@ body {
   background: #6c24f1fb;
   color: white;
   border-radius: 7px;
-  padding: 0.7rem;
+  padding: 1rem;
   outline: none;
   display: block;
   margin: auto;
@@ -35,7 +35,7 @@ body {
   margin: 2rem auto;
   text-align: center;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .github__card {
@@ -57,7 +57,7 @@ body {
 }
 
 .github__info > p {
-  width: 55ch;
+  min-width: 55ch;
   line-height: 1.4;
 }
 
@@ -74,7 +74,7 @@ body {
 .github__img {
   border-radius: 50%;
   border: 7px solid rgb(44, 85, 219);
-  width: 50%;
+  width: 25%;
 }
 
 .github__repos {
@@ -83,6 +83,8 @@ body {
 
 .github__repo {
   background: rgb(44, 85, 219);
-  padding: 0.3rem;
+  padding: 0.5rem;
   margin-left: 0.5rem;
+  line-height: 3;
+  
 }
